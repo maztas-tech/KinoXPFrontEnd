@@ -13,7 +13,7 @@ async function postObjectAsJson(url, object, httpVerbum) {
 }
 
 
-async function createMethod(url, object) {
+/*async function createMethod(url, object) {
     const fetchOptions = {
         method: "POST",
         headers: {
@@ -62,8 +62,10 @@ async function deleteMethod(url) {
     return response
 }
 
+ */
+
 function fetchAnyUrl(url) {
     return fetch(url).then(response => response.json())
 }
 
-export {postObjectAsJson, createMethod, getAllMethod, updateMethod, deleteMethod, fetchAnyUrl}
+export {postObjectAsJson, fetchAnyUrl}
