@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create movie</title>
+    <link rel="stylesheet" href="../css/styleCreateMovie.css">
+</head>
+<body>
+<h1> create movie</h1>
+
+<div>
+    <form action="http://localhost:8080/saveMovie" method="post" id="movie">
+
+        <div class="form-group">
+            <label for="movieTitle">Title</label>
+            <input class="inputfield" type="text" name="movieTitle" id="movieTitle" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="movieLength">Filmens længde</label>
+            <input class="inputfield" type="number" name="movieLength" id="movieLength" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="genre">genre</label>
+            <input class="inputfield" type="text" name="genre" id="genre" required>
+        </div>
+
+        <button type="submit" title="opret" id="submit">Opret</button>
+    </form>
+</div>
+
+</body>
+<script src="../js/movie.js"></script>
+</html>
