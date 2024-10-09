@@ -4,7 +4,7 @@ async function postObjectAsJson(url, object, httpVerbum) {
     const fetchOptions = {
         method: httpVerbum,
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": 'application/json',
         },
         body: objectAsJsonString
     }
@@ -49,23 +49,23 @@ async function updateMethod(url, object) {
     const response = await fetch(url, fetchOptions)
     return response
 }
-
+ */
 
 async function deleteMethod(url) {
     const fetchOptions = {
         method: "DELETE",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": 'application/json',
         },
     }
     const response = await fetch(url, fetchOptions)
     return response
 }
 
- */
+
 
 function fetchAnyUrl(url) {
     return fetch(url).then(response => response.json())
 }
 
-export {postObjectAsJson, fetchAnyUrl}
+export {postObjectAsJson, deleteMethod, fetchAnyUrl}
