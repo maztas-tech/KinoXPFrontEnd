@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Employee</title>
+    <link rel="stylesheet" href="../css/styleCreateMovie.css">
+</head>
+<body>
+<h1>Create a new Employee</h1>
+
+<div>
+    <form action="http://localhost:8080/saveEmployee" method="post" id="employee">
+        <div class="form-group">
+            <label class="form-label" for="inpName">Navn</label>
+            <input
+                    type="text"
+                    name="employeeName"
+                    class="inputfield"
+                    placeholder="eks. Lamine Yamal"
+                    id="inpName"
+                    required>
+        </div>
+        <div>
+            <label class="form-label" for="inpUserName">Brugernavn</label>
+            <input
+                    type="text"
+                    name="employeeUserName"
+                    class="inputfield"
+                    placeholder="eks. yamal304"
+                    id="inpUserName"
+                    required>
+        </div>
+        <div>
+            <label class="form-label" for="inpCode">Adgangskode</label>
+            <input
+                    type="text"
+                    name="employeeCode"
+                    class="inputfield"
+                    placeholder="eks. 1234abcd"
+                    id="inpCode"
+                    required
+            >
+        </div>
+        <div>
+            <label class="form-label" for="inpRole">Role</label>
+            <input
+                    type="text"
+                    name="employeeRole"
+                    class="inputfield"
+                    placeholder="eks. MANAGER eller EMPLOYEE"
+                    id="inpRole"
+                    required
+            >
+        </div>
+    </form>
+</div>
+</body>
+</html>
