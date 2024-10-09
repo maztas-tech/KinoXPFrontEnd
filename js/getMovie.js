@@ -63,6 +63,15 @@ async function deleteMovie(movie) {
 let movies = []
 
 async function fetchMovies() {
+    tblMovies.innerHTML = `
+        <tr>
+            <th>Movie ID</th>
+            <th>Movie Title</th>
+            <th>Movie Length</th>
+            <th>Movie Genre</th>
+            <th>Movie Screening</th>
+        </tr>
+    `;
     movies = await fetchAnyUrl(urlGetMovies)
     movies.forEach(createTable)
 }
