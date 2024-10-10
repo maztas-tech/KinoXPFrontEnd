@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Create Employee</title>
     <link rel="stylesheet" href="../css/styleCreateMovie.css">
+    <script src="../js/createEmployee.js"></script>
+
 </head>
 <body>
-<h1>Create a new Employee</h1>
+<h1>Opret en ny medarbejder</h1>
 
 <div>
     <form action="http://localhost:8080/saveEmployee" method="post" id="employee">
@@ -41,18 +43,19 @@
                     required
             >
         </div>
-        <div>
-            <label class="form-label" for="inpRole">Role</label>
-            <input
-                    type="text"
+        <div id="roleContainer">
+            <label class="form-label" for="inpRole">Rolle</label>
+            <select
                     name="employeeRole"
                     class="inputfield"
-                    placeholder="eks. MANAGER eller EMPLOYEE"
                     id="inpRole"
                     required
             >
+            </select>
         </div>
+        <button type="submit" id="submitBtn">Opret medarbejder</button>
     </form>
 </div>
+<script src="../js/roleDropDownFunction.js"></script>
 </body>
 </html>
