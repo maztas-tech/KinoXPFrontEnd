@@ -12,7 +12,7 @@ function createTable(movie) {
     let cellCount = 0
     let rowCount = tblMovies.rows.length
     let row = tblMovies.insertRow(rowCount)
-    row.id = movie.movieTitle;
+    row.id = movie.movieID;
 
     let cell = row.insertCell(cellCount++)
     cell.innerHTML = movie.movieID
@@ -37,14 +37,16 @@ function createTable(movie) {
     pbDelete.setAttribute("value", "Delete Movie");
     cell.appendChild(pbDelete);
 
-
-
-
     pbDelete.onclick = function() {
-        document.getElementById(movie.movieTitle).remove();
+        document.getElementById(movie.movieID).remove();
         deleteMovie(movie);
     }
 }
+
+const pbUpdateMovie = document.getElementById("pbUpdateMovie");
+pbUpdateMovie.addEventListener('click', function() {
+    window.location.href = "updateMovie.html";
+});
 
 async function deleteMovie(movie) {
     try {
@@ -57,8 +59,6 @@ async function deleteMovie(movie) {
         console.log(error);
     }
 }
-
-
 
 let movies = []
 

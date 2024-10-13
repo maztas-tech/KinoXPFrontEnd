@@ -1,4 +1,3 @@
-/* getMovie.css */
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
@@ -20,13 +19,17 @@ h1 {
     background: -webkit-linear-gradient(45deg, #3498db, #8e44ad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* Adds space between title and table */
+    position: relative;
+    top: 30px;
 }
 
+/* Button styles */
 button {
     background-color: #3498db;
     color: white;
     padding: 12px 24px;
-    margin-bottom: 30px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -42,11 +45,31 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* Specific styles for each button */
+#pbGetMovies {
+    position: absolute;
+    left: 0; /* Aligns to the left side of the table */
+    top: 50px;  /* Adjusts the vertical position */
+    margin-left: 5%; /* Adds a small margin from the edge */
+}
+
+#pbUpdateMovie {
+    background-color: orange; /* Change to orange */
+    position: absolute;
+    right: 0; /* Aligns to the right side of the table */
+    top: 50px;  /* Adjusts the vertical position */
+    margin-right: 5%; /* Adds a small margin from the edge */
+}
+
+#pbUpdateMovie:hover {
+    background-color: darkorange;
+}
+
 .table {
     width: 90%;
     max-width: 1200px;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 100px auto 0 auto; /* Centers table and adjusts for button space */
     font-size: 18px;
     border-radius: 10px;
     overflow: hidden;
