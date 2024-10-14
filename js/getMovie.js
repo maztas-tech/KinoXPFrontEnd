@@ -30,6 +30,14 @@ function createTable(movie) {
     cell.innerHTML = movie.movieScreening
 
     cell = row.insertCell(cellCount++)
+    let img = document.createElement("img")
+    img.setAttribute("src", movie.photo)
+    img.setAttribute("alt", "hej")
+    img.setAttribute("width", 150)
+    img.setAttribute("height", 150)
+    cell.appendChild(img)
+
+    cell = row.insertCell(cellCount++)
     const pbDelete = document.createElement("button");
     pbDelete.className = "btn1";
     pbDelete.innerHTML = '<i></i> Delete Movie';  // Tilføj ikonet inde i knappen
@@ -70,6 +78,7 @@ async function fetchMovies() {
             <th>Movie Length</th>
             <th>Movie Genre</th>
             <th>Movie Screening</th>
+            <th>Movie Photo</th>
         </tr>
     `;
     movies = await fetchAnyUrl(urlGetMovies)
