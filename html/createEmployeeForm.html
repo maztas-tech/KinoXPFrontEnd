@@ -13,42 +13,44 @@
 <div>
     <form action="http://localhost:8080/saveEmployee" method="post" id="employee">
         <div class="form-group">
-            <label class="form-label" for="inpName">Navn</label>
+            <label class="form-label" for="employeeName">Navn</label>
             <input
                     type="text"
                     name="employeeName"
                     class="inputfield"
                     placeholder="eks. Lamine Yamal"
-                    id="inpName"
-                    required>
+                    id="employeeName"
+                    required
+            >
         </div>
         <div>
-            <label class="form-label" for="inpUserName">Brugernavn</label>
+            <label class="form-label" for="employeeUsername">Brugernavn</label>
             <input
                     type="text"
-                    name="employeeUserName"
+                    name="employeeUsername"
                     class="inputfield"
                     placeholder="eks. yamal304"
-                    id="inpUserName"
-                    required>
+                    id="employeeUsername"
+                    required
+            >
         </div>
         <div>
-            <label class="form-label" for="inpCode">Adgangskode</label>
+            <label class="form-label" for="employeePassword">Adgangskode</label>
             <input
                     type="text"
-                    name="employeeCode"
+                    name="employeePassword"
                     class="inputfield"
                     placeholder="eks. 1234abcd"
-                    id="inpCode"
+                    id="employeePassword"
                     required
             >
         </div>
         <div id="roleContainer">
-            <label class="form-label" for="inpRole">Rolle</label>
+            <label class="form-label" for="role">Rolle</label>
             <select
-                    name="employeeRole"
+                    name="role"
                     class="inputfield"
-                    id="inpRole"
+                    id="role"
                     required
             >
             </select>

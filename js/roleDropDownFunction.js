@@ -1,50 +1,58 @@
-console.log("Jeg er i dropdown role js")
+document.addEventListener("DOMContentLoaded", function () {
 
-const url = "http://localhost:8080/allRoles"
+    console.log("Jeg er i dropdown role js")
 
-async function fetchRoles() {
-    const response = await fetch(url)
+    const url = "http://localhost:8080/allRoles"
 
-    if (response.ok) {
-        const roles = await response.json()
-        console.log(roles)
-        return roles.flat()
-    } else {
-        console.log("Fetch Failed")
+    async function fetchRoles() {
+        const response = await fetch(url)
+
+        if (response.ok) {
+            const roles = await response.json()
+            console.log(roles)
+            return roles
+        } else {
+            console.log("Fetch Failed")
+        }
     }
-}
 
 
-function dropDownRoles(role) {
-    const roleElement = document.createElement("option")
-    const roleName = role.roleName;
-    roleElement.value = roleName
-    roleElement.textContent = roleName
-    console.log(roleElement)
-    dDRole.appendChild(roleElement)
-}
-
-async function storeFetch() {
-    dDRole.innerHTML = ""
-    const promRoles = await fetchRoles()
-    if (promRoles) {
-        let roleList = promRoles.flat()
-        roleList.flat().forEach(dropDownRoles)
-    } else {
-        console.log("fetch Failed")
+    async function storeFetch() {
+        dDRole.innerHTML = ""
+        const promRoles = await fetchRoles()
+        console.log(promRoles)
+        if (promRoles) {
+            let roleList = promRoles.flat()
+            console.log(roleList)
+            roleList.flat().forEach(dropDownRoles)
+        } else {
+            console.log("fetch Failed")
+        }
     }
-}
 
-function selectRole() {
-    const selInd = dDRole.selectedIndex;
-    const selRole = dDRole.options[selInd].value
-
-    if (selRole) {
-        const roleContainer = document.getElementById("roleContainer")
-        roleContainer.innerHTML = "";
+    function dropDownRoles(role) {
+        const roleElement = document.createElement("option")
+        roleElement.value = JSON.stringify({roleID: role.roleID, roleName: role.roleName})
+        roleElement.textContent = role.roleName;
+        dDRole.appendChild(roleElement)
     }
-}
 
-dDRole = document.getElementById("inpRole")
-dDRole.addEventListener("select", selectRole)
-storeFetch()
+    function selectRole() {
+
+        const selInd = dDRole.selectedIndex;
+        const selRoleID = dDRole.options[selInd].value
+
+        const roleID = Number(String.valueOf(selRoleID))
+        console.log(roleID)
+
+        if (selRoleID) {
+            const roleContainer = document.getElementById("roleContainer")
+            roleContainer.innerHTML = "";
+        }
+    }
+
+    dDRole = document.getElementById("role")
+    dDRole.addEventListener("select", selectRole)
+    storeFetch()
+
+})
