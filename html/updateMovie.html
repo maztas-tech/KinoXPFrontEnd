@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Movie</title>
+    <link rel="stylesheet" href="../css/updateMovie.css">
+</head>
+<body>
+<h1>Update Movie</h1>
+
+<div>
+    <form action="http://localhost:8080/updateMovie" method="put" id="movie">
+
+        <div class="form-group">
+            <label for="movieID">Movie ID</label>
+            <input class="inputfield" type="number" name="movieID" id="movieID" required>
+        </div>
+
+        <div class="form-group">
+            <label for="movieTitle">Movie Title</label>
+            <input class="inputfield" type="text" name="movieTitle" id="movieTitle" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="movieLength">Movie length</label>
+            <input class="inputfield" type="number" name="movieLength" id="movieLength" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="genre">Movie Genre</label>
+            <input class="inputfield" type="text" name="genre" id="genre" required>
+        </div>
+
+        <button type="submit" title="update" id="submit">Update</button>
+    </form>
+</div>
+<div class="button-container">
+    <button id="goToCreateMovies" class="action-button" onclick="window.location.href='createMovie.html'">Create Movie</button>
+    <button id="goToGetMovies" class="action-button" onclick="window.location.href='getMovie.html'">Get Movies</button>
+</div>
+</body>
+<script src="../js/updateMovie.js"></script>
+</html>

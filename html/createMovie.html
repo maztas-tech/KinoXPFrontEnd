@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create movie</title>
+    <link rel="stylesheet" href="../css/createMovie.css">
+</head>
+<body>
+<h1>Create Movie</h1>
+
+<div class="form-container">
+    <form action="http://localhost:8080/saveMovie" method="post" id="movie">
+
+        <div class="form-group">
+            <label for="movieTitle">Movie Title</label>
+            <input class="inputfield" type="text" name="movieTitle" id="movieTitle" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="movieLength">Movie Length</label>
+            <input class="inputfield" type="number" name="movieLength" id="movieLength" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="genre">Movie Genre</label>
+            <input class="inputfield" type="text" name="genre" id="genre" required>
+        </div>
+        <div class="form-group">
+            <label class="form-lab" for="photo">Movie Photo</label>
+            <input class="inputfield" type="url" name="photo" id="photo" required>
+        </div>
+
+        <button type="submit" title="create" id="submit">Create</button>
+    </form>
+</div>
+<button id="goToGetMovies" onclick="window.location.href='getMovie.html'">All Movies</button>
+<button id="goToUpdateMovies" onclick="window.location.href='updateMovie.html'">Update Movies</button>
+
+</body>
+<script src="../js/createMovie.js"></script>
+</html>

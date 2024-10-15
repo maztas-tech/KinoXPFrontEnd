@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="../css/getMovie.css">
+</head>
+<body>
+<button id="pbGetMovies">Hent Movies</button>
+<button id="pbUpdateMovie">Update Movie</button>
+
+<div class="div1">
+    <h1>Movies</h1>
+    <table class="table" id="tblMovies">
+        <tr>
+            <th>Movie ID</th>
+            <th>Movie Title</th>
+            <th>Movie Length</th>
+            <th>Movie Genre</th>
+            <th>Movie Screening</th>
+            <th>Movie Photo</th>
+        </tr>
+    </table>
+</div>
+<button id="goToCreateMovies" class="action-button" onclick="window.location.href='createMovie.html'">Create Movie</button>
+</body>
+<script type="module" src="../js/getMovie.js"></script>
+
+</html>

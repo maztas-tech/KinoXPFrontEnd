@@ -1,0 +1,160 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 3em;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(45deg, #3498db, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* Adds space between title and table */
+    position: relative;
+    top: 30px;
+}
+
+/* Button styles */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Specific styles for each button */
+#pbGetMovies {
+    position: absolute;
+    left: 0; /* Aligns to the left side of the table */
+    top: 50px;  /* Adjusts the vertical position */
+    margin-left: 5%; /* Adds a small margin from the edge */
+}
+
+#pbUpdateMovie {
+    background-color: orange; /* Change to orange */
+    position: absolute;
+    right: 0; /* Aligns to the right side of the table */
+    top: 50px;  /* Adjusts the vertical position */
+    margin-right: 5%; /* Adds a small margin from the edge */
+}
+
+#pbUpdateMovie:hover {
+    background-color: darkorange;
+}
+
+.table {
+    width: 90%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    margin: 100px auto 0 auto; /* Centers table and adjusts for button space */
+    font-size: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.table th {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f5f7fa;
+}
+
+.table tr:hover {
+    background-color: #dcdde1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Delete Button Style */
+.btn1 {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icon */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.2);
+}
+
+.btn1:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+    transform: scale(1.05);
+}
+
+.btn1:active {
+    transform: scale(0.95); /* Pressed effect */
+}
+
+.btn1 i {
+    font-size: 16px; /* Icon size */
+    content: "\1F5D1"; /* Unicode for trash can icon */
+}
+
+/* For Delete Button Hover Effect */
+.btn1 i::before {
+    content: "\1F5D1"; /* Trash can icon */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .table, .table th, .table td {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
