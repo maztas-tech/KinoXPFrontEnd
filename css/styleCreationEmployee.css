@@ -1,0 +1,100 @@
+/* General styles for the form */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields */
+.inputfield {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.inputfield:focus {
+    border-color: #007BFF; /* Blue highlight */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light glow */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF; /* Primary blue color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-2px); /* Subtle button lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Button click effect */
+button:active {
+    transform: translateY(1px); /* Slight push-down effect */
+}
+
+/* Error message styling */
+input:invalid {
+    border-color: #FF4C4C; /* Red border for invalid input */
+}
+
+/* Smooth transition for form elements */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Role dropdown styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #007BFF; /* Blue highlight for dropdown */
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        margin: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
