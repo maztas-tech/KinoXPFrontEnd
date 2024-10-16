@@ -1,4 +1,4 @@
-console.log("brother jawad was here")
+console.log("create movie js file")
 
 document.addEventListener("DOMContentLoaded", createFormEventListener)
 
