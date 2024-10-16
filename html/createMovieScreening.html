@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a screening</title>
+</head>
+<body>
+
+  <h1>Please insert the values for the movie screening</h1>
+
+  <form action="http://localhost:8080/saveMovieScreening" method="post" id="createMovieScreening">
+    <div>
+      <label for="movieScreeningTitle">Title of the screening</label>
+      <input type="text" id="movieScreeningTitle" required>
+    </div>
+    <div>
+      <label for="movieScreening3D">Is it 3D ?</label>
+      <input type="checkbox" id="movieScreening3D" required>
+    </div>
+    <div>
+      <label for="movieScreeningDate">Date</label>
+      <input type="date" id="movieScreeningDate" required>
+    </div>
+    <div>
+      <label for="movieScreeningTime">Time</label>
+      <input type="time" id="movieScreeningTime" required>
+    </div>
+    <button type="submit" title="create" id="submit">Create</button>
+
+  </form>
+
+
+
+  <script type="module" src="../js/createMovieScreening.js"></script>
+</body>
+</html>
