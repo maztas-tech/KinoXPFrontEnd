@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
+
     function createTable(employee) {
 
         let cellCount = 0
