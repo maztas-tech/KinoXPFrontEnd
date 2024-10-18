@@ -51,10 +51,16 @@ async function postFormdataAsJason(url, employee) {
     console.log("Response status: ", response.status)
 
     if (!response.ok) {
-        const errorMessage = await response.text();
+        const errorMessage = await response.text()
         console.error(errorMessage);
     } else {
-        console.log(await response.json());
+        console.log(await response.json())
     }
+
+
+
+
 }
+
+
 
